@@ -1,7 +1,7 @@
 # Личный проект «Кексобукинг»
 
 * Студент: [Mikhail Poluboyarinov](https://up.htmlacademy.ru/javascript/22/user/1281337).
-* Наставник: `Неизвестно`.
+* Наставник: [Евгений Казаков](https://htmlacademy.ru/profile/id343981).
 
 ---
 
