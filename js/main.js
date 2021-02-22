@@ -127,7 +127,7 @@ const createOffer = () => {
     },
     offer: {
       title: getRandomArrayElement(OFFERS_TITLES),
-        address: getRandomLocation(X.min, X.max, 5).toString() + ', ' + getRandomLocation(Y.min, Y.max, 5).toString(),
+      address: getRandomLocation(X.min, X.max, 5).toString() + ', ' + getRandomLocation(Y.min, Y.max, 5).toString(),
       price: getRandomNumber(1, 70000),
       type: getRandomArrayElement(OFFERS_TYPES),
       rooms: getRandomNumber(1, 3),
