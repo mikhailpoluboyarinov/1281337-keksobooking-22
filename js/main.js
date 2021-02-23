@@ -58,6 +58,14 @@ const Y = {
   max: 139.80000,
 };
 
+const MIN_PRICE = 4000;
+
+const MAX_PRICE = 70000;
+
+const MIN_ROOMS_GUESTS = 1;
+
+const MAX_ROOMS_GUESTS = 3;
+
 const OFFERS_COUNT = 10;
 
 // Случайное число из диапазона
@@ -110,13 +118,13 @@ const getRandomUniqueArray = (array) => {
   return newArray;
 }
 
-// Массив случайной длины из значений
-
-const getRandomArray = (array) => {
-  return new Array(getRandomNumber(1, 5)).fill(null).map(() => {
-    return getRandomArrayElement(array);
-  });
-}
+//  Массив случайной длины из значений
+//
+// const getRandomArray = (array) => {
+//   return new Array(getRandomNumber(1, 5)).fill(null).map(() => {
+//     return getRandomArrayElement(array);
+//   });
+// }
 
 // Создание объявления
 
@@ -127,16 +135,16 @@ const createOffer = () => {
     },
     offer: {
       title: getRandomArrayElement(OFFERS_TITLES),
-      address: getRandomLocation(X.min, X.max, 5).toString() + ', ' + getRandomLocation(Y.min, Y.max, 5).toString(),
-      price: getRandomNumber(1, 70000),
+      address: getRandomLocation(X.min, X.max, 5) + ', ' + getRandomLocation(Y.min, Y.max, 5),
+      price: getRandomNumber(MIN_PRICE, MAX_PRICE),
       type: getRandomArrayElement(OFFERS_TYPES),
-      rooms: getRandomNumber(1, 3),
-      guests: getRandomNumber(1, 3),
+      rooms: getRandomNumber(MIN_ROOMS_GUESTS, MAX_ROOMS_GUESTS),
+      guests: getRandomNumber(MIN_ROOMS_GUESTS, MAX_ROOMS_GUESTS),
       checkin: getRandomArrayElement(OFFERS_CHECKIN_CHECKOUT),
       checkout: getRandomArrayElement(OFFERS_CHECKIN_CHECKOUT),
       features: getRandomUniqueArray(OFFERS_FEATURES),
       description: getRandomArrayElement(OFFERS_DESCRIPTIONS),
-      photos: getRandomArray(OFFERS_PHOTOS),
+      photos: getRandomUniqueArray(OFFERS_PHOTOS),
     },
     location: {
       x: getRandomLocation(X.min, X.max, 5),
@@ -150,7 +158,7 @@ const createOffer = () => {
 // Создание массива объектов
 
 const createOffers = (count) => {
-  return new Array(count).fill(null).map(() => createOffer())
+  return new Array(count).fill(null).map(() => createOffer());
 }
 
 createOffers(OFFERS_COUNT);
