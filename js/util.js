@@ -1,5 +1,3 @@
-'use strict';
-
 // Случайное число из диапазона
 
 const getRandomNumber = (min, max) => {

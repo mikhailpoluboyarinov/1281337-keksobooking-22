@@ -1,5 +1,3 @@
-'use strict';
-
 import {getRandomNumber, getRandomLocation, getRandomArrayElement, getRandomUniqueArray} from './utils.js';
 
 const AUTHOR_AVATAR = {
@@ -95,4 +93,10 @@ const createOffer = () => {
   }
 }
 
-export {createOffer};
+// Создание массива объектов
+
+const createOffers = (count) => {
+  return new Array(count).fill(null).map(() => createOffer());
+}
+
+export {createOffers};
