@@ -1,4 +1,9 @@
-import {getRandomNumber, getRandomLocation, getRandomArrayElement, getRandomUniqueArray} from './utils.js';
+import {
+  getRandomNumber,
+  getRandomLocation,
+  getRandomArrayElement,
+  getRandomUniqueArray
+} from './util.js';
 
 const AUTHOR_AVATAR = {
   url: 'img/avatars/user0',
@@ -7,7 +12,7 @@ const AUTHOR_AVATAR = {
 
 const OFFERS_TITLES = [
   '1-комнатная квартира в аренду',
-  '2-комнатная квартар в аренду',
+  '2-комнатная квартира в аренду',
   'Дом на берегу реки',
   'Коттедж в аренду посуточно',
 ];
