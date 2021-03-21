@@ -3,12 +3,15 @@ import {createOfferTemplate} from './offer-template.js';
 
 const OFFERS_COUNT = 1;
 
-const similarOffersList = document.querySelector('.map__canvas');
-const similarListFragment = document.createDocumentFragment();
-const similarOffers = createOffers(OFFERS_COUNT);
+const  drawOffer = () =>  {
+  const offersList = document.querySelector('.map__canvas');
+  const listFragment = document.createDocumentFragment();
+  const offers = createOffers(OFFERS_COUNT);
+  offers.forEach((value) => {
+    listFragment.appendChild(createOfferTemplate(value));
+  });
 
-similarOffers.forEach((value) => {
-  similarListFragment.appendChild(createOfferTemplate(value));
-});
+  offersList.appendChild(listFragment);
+}
 
-similarOffersList.appendChild(similarListFragment);
+export {drawOffer};
