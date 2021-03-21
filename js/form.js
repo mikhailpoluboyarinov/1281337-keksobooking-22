@@ -1,8 +1,8 @@
-const typeMinPrice = {
-  bungalow: 0,
-  flat: 1000,
-  house: 5000,
-  palace: 10000,
+const TypeMinPrice = {
+  BUNGALOW: 0,
+  FLAT: 1000,
+  HOUSE: 5000,
+  PALACE: 10000,
 };
 
 const userForm = document.querySelector('.ad-form');
@@ -12,8 +12,8 @@ const userFormTimein = userForm.querySelector('#timein');
 const userFormTimeout = userForm.querySelector('#timeout');
 
 const changeType = (evt) => {
-  userFormPrice.placeholder = typeMinPrice[evt.target.value];
-  userFormPrice.min = typeMinPrice[evt.target.value];
+  userFormPrice.placeholder = TypeMinPrice[evt.target.value.toUpperCase()];
+  userFormPrice.min = TypeMinPrice[evt.target.value.toUpperCase()];
 };
 
 const changeTimeInOut = (evt) => {
