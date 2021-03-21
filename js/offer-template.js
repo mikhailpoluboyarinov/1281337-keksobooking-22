@@ -26,7 +26,7 @@ const createOfferTemplate = (obj) => {
     featureElement.classList.add('popup__feature', 'popup__feature--' + value);
     featureFragment.appendChild(featureElement);
   });
-  offerElement.querySelector('.popup__features').textContent = '';
+  offerElement.querySelector('.popup__features').innerHTML = '';
   offerElement.querySelector('.popup__features').appendChild(featureFragment);
 
   offerElement.querySelector('.popup__description').textContent = offer.description;
@@ -38,7 +38,7 @@ const createOfferTemplate = (obj) => {
     photoElement.src = value;
     photoFragment.appendChild(photoElement);
   });
-  offerElement.querySelector('.popup__photos').textContent = '';
+  offerElement.querySelector('.popup__photos').innerHTML = '';
   offerElement.querySelector('.popup__photos').appendChild(photoFragment);
 
   offerElement.querySelector('.popup__avatar').src = author.avatar;
